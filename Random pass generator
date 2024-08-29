@@ -1,0 +1,18 @@
+import random
+import string  # string use kiye kyunki ye saare charac, digits , punctuators ko display krta hai .
+
+
+def generate_pass(name,dob,age):
+    combine = name + dob + str(age)
+    
+    pass_len = 12
+    
+    password =" ".join(random.choices(combine + string.ascii_letters + string.digits + string.punctuation , k=pass_len ))
+    return password
+
+name = input("Enter Your name : ")
+dob = input("Enter DOB (ddmmyyy): ")
+age = int(input("Enter your Age :"))
+
+password =generate_pass(name,dob,age)
+print("Your Random Password is : ",password) 
