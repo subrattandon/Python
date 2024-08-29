@@ -1,0 +1,15 @@
+class Order:
+    def __init__(self,items,price):
+        self.items = items
+        self.price = price
+        
+        
+    def __lt__(self, odr2):
+        return self.price < odr2.price 
+    
+        
+        
+odr1 = Order("Chips",20)
+odr2 = Order("Doritos",50)
+
+print(odr1 < odr2)
