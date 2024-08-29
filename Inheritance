@@ -1,0 +1,33 @@
+n = input("Enter Employee Name 1 :") 
+class Employee:
+    def __init__(self,role,dep,sal):
+        self.role = role
+        self.dep = dep
+        self.sal = sal
+        
+        
+    def show_details(self):
+        print("Role =", self.role)
+        print("Department = ",self.dep)
+        print("Salary = ",self.sal)
+        
+class Engineer(Employee):
+    def __init__(self,dob,age):
+        self.dob=dob
+        self.age=age
+        super().__init__("Engineer","Aws","75,000")
+        
+    def show_details(self):
+        super().show_details()
+        print("DOB = ",self.dob)
+        print("Age = ",self.age)
+        
+        
+     
+        
+e1 = Engineer("11/05/2005",20)
+e1.show_details()
+    
+
+        
+        
