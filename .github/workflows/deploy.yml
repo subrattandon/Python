@@ -5,6 +5,9 @@ on:
     branches:
       - main  # Jab "main" branch me push karega, tab yeh trigger hoga
 
+permissions:
+  id-token: write  # ✅ Fix: id-token ka write permission diya
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
