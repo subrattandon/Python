@@ -22,7 +22,8 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          auth-type: OIDC  # ✅ Fix: Service Principal ki jagah OIDC use karo
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}  # ✅ Fix: Secret ka correct usage
+          auth-type: SERVICE_PRINCIPAL  # ✅ Fix: OIDC hatao, SERVICE_PRINCIPAL lagao
 
       - name: Deploy to Azure
         run: |
